@@ -8,11 +8,11 @@ static final GITHUB_TOKEN_CREDENTIAL = "usergh"
 this.language = 'php'
 this.propertiesName = 'project-test.properties'
 this.propertiesPath = "/tmp/" + this.propertiesName
-this.workspace = PWD() 
+this.workspace = pwd() 
 def utils = new JenkinsfileUtil(this)
 
 def repositoryUrl = scm.userRemoteConfigs[0].url
-def workspace = PWD()
+def workspace = pwd()
 
 println repositoryUrl
 println workspace
