@@ -11,8 +11,11 @@ this.propertiesPath = "/tmp/" + this.propertiesName
 def utils = new JenkinsfileUtil(this)
 
 def repositoryUrl = scm.userRemoteConfigs[0].url
+def workspace = env.WORKSPACE
 
 println repositoryUrl
+println workspace
+println $WORKSPACE
 
 try{
     node{
