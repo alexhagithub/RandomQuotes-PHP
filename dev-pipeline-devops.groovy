@@ -8,14 +8,14 @@ static final GITHUB_TOKEN_CREDENTIAL = "usergh"
 this.language = 'php'
 this.propertiesName = 'project-test.properties'
 this.propertiesPath = "/tmp/" + this.propertiesName
-this.workspace = sh "echo pwd" 
+//this.workspace = sh "echo pwd" 
 def utils = new JenkinsfileUtil(this)
 
 def repositoryUrl = scm.userRemoteConfigs[0].url
-def workspace = sh "echo pwd" 
+//def workspace = sh "echo pwd" 
 
 println repositoryUrl
-println workspace
+//println workspace
 
 try{
     node{
@@ -38,6 +38,7 @@ try{
 
         stage('Security'){
             //TODO: GIT LEAKS / AVALORA
+            println pwd()
             utils.scanningSecutiry()
         }
 
