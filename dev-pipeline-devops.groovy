@@ -16,7 +16,6 @@ def workspace = pwd()
 
 println repositoryUrl
 println workspace
-println WORKSPACE
 
 try{
     node{
