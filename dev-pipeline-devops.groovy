@@ -15,7 +15,7 @@ def workspace = env.WORKSPACE
 
 println repositoryUrl
 println workspace
-println $WORKSPACE
+println WORKSPACE
 
 try{
     node{
